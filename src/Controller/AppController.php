@@ -141,7 +141,7 @@ class AppController extends Controller
         if ($this->controller == 'ajax') {
             $this->viewBuilder()->layout('ajax');
         } else {
-            $this->viewBuilder()->layout('conlatatca');
+            $this->viewBuilder()->layout('default');
         }
     }
     
