@@ -30,46 +30,41 @@
                     <!-- Header Top Left Start -->
                     <div class="header-top-left order-2 order-lg-1">
                         <ul>
+                            <?php if (!empty($settings['company']['tel'])): ?>
                             <li>
-                                <a href="#"><i class="fa fa-phone"></i> (08)123 456 7890</a>
+                                <a href="#"><i class="fa fa-phone"></i> <?php echo $settings['company']['tel'];?></a>
                             </li>
+                            <?php endif; ?>
+                            <?php if (!empty($settings['company']['email'])): ?>
                             <li>
-                                <a href="#"><i class="fa fa-envelope-open-o"></i> yourmail@domain.com</a>
+                                <a href="#"><i class="fa fa-envelope-open-o"></i> <?php echo $settings['company']['email'];?></a>
                             </li>
+                            <?php endif; ?>
+                            <?php if (!empty($settings['company']['facebook']) || !empty($settings['company']['instagram']) || !empty($settings['company']['twitter']) || !empty($settings['company']['youtube']) || !empty($settings['company']['google_plus'])): ?>
                             <li>
+                                <?php 
+                                $social = array(
+                                    'facebook' => 'facebook',
+                                    'twitter' => 'twitter',
+                                    'youtube' => 'youtube',
+                                    'google_plus' => 'google-plus',
+                                    'instagram' => 'instagram'
+                                );
+                                ?>
                                 <ul class="social-icon">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-rss" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-youtube" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
+                                    <?php foreach ($settings['company'] as $k => $v): ?>
+                                        <?php if (array_key_exists($k, $social)): ?>
+                                        <li>
+                                            <a href="<?php echo $v; ?>">
+                                                <i class="fa fa-<?php echo $social[$k]; ?>" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </ul>
                             </li>
+                            <?php endif; ?>
+                            
                         </ul>
                     </div>
                     <!-- Header Top Left End -->
@@ -146,8 +141,8 @@
                 <!-- Logo Start -->
                 <div class="col-xl-3 col-lg-2 col-6">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="img/logo/logo.png" alt="logo-image">
+                        <a href="<?php echo $BASE_URL; ?>">
+                            <img src="<?php echo $settings['company']['logo']; ?>" alt="logo-image">
                         </a>
                     </div>
                 </div>

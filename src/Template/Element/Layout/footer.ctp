@@ -8,22 +8,41 @@
                 <div class="col-lg-4 col-md-6 mb-all-30">
                     <div class="single-footer">
                         <div class="footer-logo mb-20">
-                            <a href="#"><img class="img" src="img/logo/logo.png" alt="logo-img"></a>
+                            <a href="<?php echo $BASE_URL; ?>"><img class="img" src="<?php echo $settings['company']['logo']; ?>" alt="logo-img"></a>
                         </div>
                         <div class="footer-content">
                             <ul class="footer-list first-content">
-                                <li><i class="pe-7s-map-marker"></i>123 Main Street, Anytown, CA 12345 - USA.</li>
-                                <li><i class="pe-7s-call"></i>0) 800 456 789</li>
+                                <?php if (!empty($settings['company']['address'])): ?>
+                                <li><i class="pe-7s-map-marker"></i><?php echo $settings['company']['address']; ?></li>
+                                <?php endif; ?>
+                                <?php if (!empty($settings['company']['tel'])): ?>
+                                <li><i class="pe-7s-call"></i><?php echo $settings['company']['tel']; ?></li>
+                                <?php endif; ?>
                                 <li><i class="pe-7s-clock"></i>Working time: 9.00 -21.00</li>
+                                <?php if (!empty($settings['company']['facebook']) || !empty($settings['company']['instagram']) || !empty($settings['company']['twitter']) || !empty($settings['company']['youtube']) || !empty($settings['company']['google_plus'])): ?>
                                 <li class="mt-20">
+                                    <?php 
+                                    $social = array(
+                                        'facebook' => 'facebook',
+                                        'twitter' => 'twitter',
+                                        'youtube' => 'youtube',
+                                        'google_plus' => 'google-plus',
+                                        'instagram' => 'instagram'
+                                    );
+                                    ?>
                                     <ul class="social-icon">
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <?php foreach ($settings['company'] as $k => $v): ?>
+                                            <?php if (array_key_exists($k, $social)): ?>
+                                            <li>
+                                                <a href="<?php echo $v; ?>">
+                                                    <i class="fa fa-<?php echo $social[$k]; ?>" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
