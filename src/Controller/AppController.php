@@ -61,8 +61,8 @@ class AppController extends Controller
          * Enable the following components for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+        $this->loadComponent('Security');
+        $this->loadComponent('Csrf');
     }
     
     /**
@@ -90,7 +90,7 @@ class AppController extends Controller
             $this->request->session()->start();
         }
         
-//        $this->session = $this->request->session();
+        $this->session = $this->request->session();
         $this->controller = strtolower($this->request->params['controller']);
         $this->action = strtolower($this->request->params['action']);
         $this->current_url = Router::url($this->here, true);

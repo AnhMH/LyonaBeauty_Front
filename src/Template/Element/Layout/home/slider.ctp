@@ -4,16 +4,13 @@
         <div class="col-sm-12 header-top-right clearfix">
             <div class="homeslider">
                 <ul class="owl-carousel-banner">
+                    <?php foreach ($sliders as $s): ?>
                     <li>
-                        <a href="#">
-                            <img src="<?php echo $BASE_URL;?>/images/banner_silder_1.jpg" alt="" />
+                        <a href="<?php echo !empty($s['link']) ? $s['link'] : '#';?>">
+                            <img src="<?php echo $s['image'];?>" alt="<?php echo $s['name'];?>" />
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <img data-src-slider="<?php echo $BASE_URL;?>/images/banner_silder_2.jpg" alt="" />
-                        </a>
-                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>

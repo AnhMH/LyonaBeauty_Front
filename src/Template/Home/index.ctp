@@ -1,4 +1,9 @@
-<?php echo $this->element('Layout/home/slider'); ?>
+<?php 
+    if (!empty($data['sliders'])) {
+        echo $this->element('Layout/home/slider', array('sliders' => $data['sliders'])); 
+    }
+?>
+
 <?php echo $this->element('Layout/home/saleoff'); ?>
 <?php echo $this->element('Layout/home/cate_product'); ?>
 <div id="content-wrap">
