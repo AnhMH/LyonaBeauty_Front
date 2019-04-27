@@ -3,6 +3,7 @@ $_description = !empty($pageDescription) ? $pageDescription : $settings['web_des
 $_keyword = !empty($pageKeyword) ? $pageKeyword : $settings['web_keyword'];
 $_title = !empty($pageTitle) ? $pageTitle : $settings['web_title'];
 $_image = !empty($pageImage) ? $pageImage : $settings['web_image'];
+$_time = time();
 ?>
 <!DOCTYPE html>
 <html lang="vi" itemscope itemtype="http://schema.org/Article" prefix="og: http://ogp.me/ns#">
@@ -13,7 +14,6 @@ $_image = !empty($pageImage) ? $pageImage : $settings['web_image'];
             <?php echo $_title; ?>
         </title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0" name="viewport">
-        <link href="<?php echo $BASE_URL;?>/css/style_new.css" rel="stylesheet" type="text/css" media="all">
         <link href="<?php echo $BASE_URL;?>/css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all">
         <style>
             #new-menu .t-menu li.saving_day_css a {
@@ -28,12 +28,12 @@ $_image = !empty($pageImage) ? $pageImage : $settings['web_image'];
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/bootstrap.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/flex.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/main.css" media="all">
-        
+        <link href="<?php echo $BASE_URL;?>/css/style_new.css" rel="stylesheet" type="text/css" media="all">
         
         <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.3.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/owl.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/jquery.fancybox.js" type="text/javascript"></script>
-        <script src="<?php echo $BASE_URL;?>/js/script_tfs.js?<?php echo time();?>" type="text/javascript"></script>
+        <script src="<?php echo $BASE_URL;?>/js/script_tfs.js?<?php echo $_time;?>" type="text/javascript"></script>
     </head>
 
     <body class="home option2 insCustomer">

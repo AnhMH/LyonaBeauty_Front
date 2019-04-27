@@ -68,13 +68,13 @@ ul.list.line > li:not(:last-child) {
 /* =========== Header Customer =========== */
 .headMain {
 	background: #9dbf17;
-	//background: url('thanh_ngang_2.jpg') left center no-repeat;
+	/*background: url('thanh_ngang_2.jpg') left center no-repeat;*/
 	background-size: cover;
 	color: #fff;
 	padding: 5px 0px;
 }
 .option2 .nav-top-menu, .option2 .nav-top-menu.nav-ontop {
-	//background: url('thanh_ngang_2.jpg') left center no-repeat;
+	/*background: url('thanh_ngang_2.jpg') left center no-repeat;*/
 	background-size: cover;
 }
 .main-header {
@@ -154,7 +154,7 @@ ul.list.line > li:not(:last-child) {
 .navMain {
 	padding: 20px 0px;
 	position: relative;
-	//background: url('thanh_ngang_1.jpg') left center no-repeat;
+	/*background: url('thanh_ngang_1.jpg') left center no-repeat;*/
 	background-size: cover;
 }
 .navMain .main-header {
@@ -169,7 +169,7 @@ ul.list.line > li:not(:last-child) {
 }
 #navMaiaMenu > ul > li > a {
 	padding: 10px 5px;
-	//color: #fff;
+	/*color: #fff;*/
 }
 #navMaiaMenu > ul > li > a.colorRed,
 a.colorRed {
@@ -356,10 +356,10 @@ span.text-show {
 }
 .option-select ul li a {
 	min-width: auto !important;
-	//width: 20px !important;
-	//height: 20px !important;
-	//border: none;
-	//border-radius: 50%;
+/*	width: 20px !important;
+	height: 20px !important;
+	border: none;
+	border-radius: 50%;*/
 	position: static !important;
 }
 .option-select ul li .picked {
@@ -371,7 +371,7 @@ span.text-show {
 	content: ' ';
 	background: transparent !important;
 	position: absolute;
-	//border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	top: 0px;
 	right: 0px;
 	bottom: 0;
