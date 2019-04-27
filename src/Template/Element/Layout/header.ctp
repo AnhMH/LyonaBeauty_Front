@@ -1,737 +1,251 @@
-<!-- Newsletter Popup Start -->
-<div class="popup_wrapper">
-    <div class="test">
-        <span class="popup_off">Close</span>
-        <div class="subscribe_area text-center mt-40">
-            <h2>Newsletter</h2>
-            <p>Subscribe to the Makali mailing list to receive updates on new arrivals, special offers and other discount
-                information.</p>
-            <div class="subscribe-form-group">
-                <form action="#">
-                    <input autocomplete="off" type="text" name="message" id="message" placeholder="Enter your email address">
-                    <button type="submit">subscribe</button>
-                </form>
-            </div>
-            <div class="subscribe-bottom mt-15">
-                <input type="checkbox" id="newsletter-permission">
-                <label for="newsletter-permission">Don't show this popup again</label>
+<?php echo $this->element('Layout/header/mobile_menu'); ?>
+
+<div id="mm-0" class="mm-page mm-slideout">
+    <div id="header" class="header">
+        <!--Desktop Header-->
+        <div class="headMain hidden-sm hidden-xs">
+            <div class="container main-header">
+                <div class="row">
+                    <!--infoShop-->
+                    <div class="col-xs-10 col-sm-3 col-md-4 logo">
+                        <div class="infoShop">
+                            <ul class="list line clearfix">
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> 0968863377&nbsp;</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i> tfsonline@hsvgroup.com.vn</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/infoShop-->
+                    <!--search-box-->
+                    <div class="col-xs-1 col-sm-6 col-md-5 header-search-box hidden-xs">
+                        <a href="javascript:;" class="visible-xs show-search-mobile"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <div class="search-box">
+                            <form class="search form-inline ultimate-search" action="/search">
+                                <div class="form-group input-serach">
+                                    <input type="hidden" name="type" value="product">
+                                    <input type="text" name="q" id="search" class="search_box" placeholder="Tìm kiếm..." value="" autocomplete="off">
+                                </div>
+                                <button id="submit-button" class="pull-right btn-search">
+                                    <span class="hidden-xs">Tìm kiếm</span>
+                                    <span class="visible-xs">
+                                        <svg class="icon-search_white">
+                                        <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#icon-search_white"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/search-box-->
+                    <!--Top right menus-->
+                    <div class="col-xs-2 col-sm-3 col-md-3 text-center trackingGroup" data-gtm-vis-recent-on-screen-2408055_54="660" data-gtm-vis-first-on-screen-2408055_54="660" data-gtm-vis-total-visible-time-2408055_54="100" data-gtm-vis-has-fired-2408055_54="1">
+                        <ul class="list line clearfix">
+                            <li><a class="store_header" href="javascript:void(0)">Cửa hàng</a></li>
+                            <li><a href="/pages/kiem-tra-don-hang">Theo dõi đơn hàng</a></li>
+                            <li class="careUser"><a href="javascript:void(0)">Chăm sóc khách hàng</a>
+                                <ul class="lisCare tfsDropdow">
+                                    <li><a href="#" style="background: url(images/care_icon_1.png) 5px center no-repeat;">Tài khoản mua hàng</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_2.png) 5px center no-repeat;">Điều khoản mua bán hàng hóa</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_3.png) 5px center no-repeat;">Chính sách tích lũy điểm TFS</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_4.png) 5px center no-repeat;">Chính sách đổi hàng</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_5.png) 5px center no-repeat;">Giao hàng và thanh toán</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_6.png) 5px center no-repeat;">Hướng dẫn sử dụng mã giảm giá trên website Reebok</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_7.png) 5px center no-repeat;">Hướng dẫn thanh toán qua cổng Smartlink</a></li>
+                                    <li><a href="#" style="background: url(images/care_icon_8.png) 5px center no-repeat;">Liên hệ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/Top right menus-->
+                </div>
             </div>
         </div>
+        <!--/Desktop Header-->
+        <!--navMain-->
+        <div class="navMain">
+            <div class="container main-header">
+                <div class="row">
+                    <!--mainLogo-->
+                    <div class="col-xs-12 col-sm-12 col-md-3 logo">
+                        <div class="mainLogo">
+                            <a href="#nav-menu" class="mm-icon-menu visible-sm visible-xs"><span></span></a>
+                            <div>
+                                <a href="/">
+                                    <img alt="THEFACESHOP" src="//theme.hstatic.net/1000036599/1000401525/14/logo2.png?v=1195">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/mainLogo-->
+                    <!--mainDesktopMenus-->
+                    <div class="col-xs-1 col-sm-6 col-md-7 header-search-box hidden-sm hidden-xs">
+                        <div id="navMaiaMenu" class="navbarNav">
+                            <ul class="list nav">
+                                <li class="active">
+                                    <a class=" current " href="/" target="_self">
+                                        Trang chủ
+                                    </a>
+                                </li>
+                                <li class="hasChild ">
+                                    <a class=" colorRed" href="#" title="Khuyến mãi" target="_self">
+                                        <span class="">Khuyến mãi</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="tfsDropdow level1" role="menu">
+                                        <li class="">
+                                            <a href="/collections/cushion-mua-1-tang-1-1-30" title="Cushion - Mua 1 Tặng 1"><span>Cushion - Mua 1 Tặng 1</span> </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/collections/cushion-mua-1-tang-1-1-30" title="Cushion - Mua 1 Tặng 1"><span>Cushion - Mua 1 Tặng 1</span> </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hasChild megaItem ">
+                                    <a class=" " href="#" title="Dòng sản phẩm" target="_self">
+                                        <span class="">Dòng sản phẩm</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="tfsDropdow levelMega">
+                                        <div class="row">
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 columnMega">
+                                                <div class="wrap">
+                                                    <ul class="list">
+                                                        <li class="head"><a href="#">Dưỡng da</a></li>
+                                                        <li>
+                                                            <a href="#" title="THEFACESHOP cushion">
+                                                                <span>Demo aa a a a a </span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/mainDesktopMenus-->
+                    <!--Account + Cart buttons-->
+                    <div class="col-xs-2 col-sm-2 col-md-2 group-button-header">
+                        <div class="deskBtn">
+                            <!--cart-block-->
+                            <div class="btn-cart" id="cart-block">
+                                <a title="My cart" href="/cart" class="hidden-sm hidden-xs">Giỏ hàng</a>
+                                <span class="text-show hidden-sm hidden-xs">Giỏ hàng</span>
+                                <span class="notify notify-right">0</span>
+                                <a href="#" class="visible-sm visible-xs cartMB">
+                                    <svg class="shopping-cart">
+                                    <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="#icon-add-cart"></use>
+                                    </svg>
+                                </a>
+                                <div class="cart-block">
+                                    <div class="cart-empty">
+                                        Giỏ hàng của bạn vẫn chưa có sản phẩm nào.
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/cart-block-->
+                            <!--login-block-->
+                            <div class="btn-cart" id="login-block">
+                                <a title="Đăng nhập" href="#" class="btn-heart hidden-sm hidden-xs">login</a>
+                                <span class="text-show hidden-xs hidden-sm">Tài khoản</span>
+                                <a href="javascript:void(0)" class="visible-sm visible-xs userMB">
+                                    <svg class="icon icon-user" viewBox="0 0 32 32">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user">
+                                    </use>
+                                    </svg>
+                                </a>
+                                <div class="cart-block">
+                                    <button type="button" class="btn btn-trigger" data-toggle="modal" data-target="#modal-login">
+                                        Đăng nhập
+                                    </button>
+                                    <div class="subText">
+                                        <span>Chưa có tài khoản? <a href="/account/register">Đăng ký mới</a></span>
+                                    </div>
+                                    <div class="login-separator"> <hr> <div class="text">hoặc</div> </div>
+                                    <div class="loginApp">
+                                        <button type="button" class="btsocialloginfb">
+                                            <div class="img">
+                                                <img src="images/facebook.png" alt="">
+                                            </div>
+                                            <span>Đăng nhập bằng Facebook</span>
+                                        </button>
+                                        <button type="button" class="btsociallogingg">
+                                            <div class="img">
+                                                <img src="images/googleplus.png" alt="">
+                                            </div>
+                                            <span>Đăng nhập bằng Google</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/login-block-->
+                        </div>
+                    </div>
+                    <!--/Account + Cart buttons-->
+
+                </div>
+            </div>
+        </div>
+        <!--/navMain-->
     </div>
 </div>
-<!-- Newsletter Popup End -->
-<!-- Main Header Area Start Here -->
-<header class="header-style-five">
-    <!-- Header Top Start Here -->
-    <div class="header-top">
-        <div class="container">
-            <div class="col-sm-12">
-                <div class="row justify-content-lg-between justify-content-center">
-                    <!-- Header Top Left Start -->
-                    <div class="header-top-left order-2 order-lg-1">
-                        <ul>
-                            <?php if (!empty($settings['company']['tel'])): ?>
-                            <li>
-                                <a href="#"><i class="fa fa-phone"></i> <?php echo $settings['company']['tel'];?></a>
-                            </li>
-                            <?php endif; ?>
-                            <?php if (!empty($settings['company']['email'])): ?>
-                            <li>
-                                <a href="#"><i class="fa fa-envelope-open-o"></i> <?php echo $settings['company']['email'];?></a>
-                            </li>
-                            <?php endif; ?>
-                            <?php if (!empty($settings['company']['facebook']) || !empty($settings['company']['instagram']) || !empty($settings['company']['twitter']) || !empty($settings['company']['youtube']) || !empty($settings['company']['google_plus'])): ?>
-                            <li>
-                                <?php 
-                                $social = array(
-                                    'facebook' => 'facebook',
-                                    'twitter' => 'twitter',
-                                    'youtube' => 'youtube',
-                                    'google_plus' => 'google-plus',
-                                    'instagram' => 'instagram'
-                                );
-                                ?>
-                                <ul class="social-icon">
-                                    <?php foreach ($settings['company'] as $k => $v): ?>
-                                        <?php if (array_key_exists($k, $social)): ?>
-                                        <li>
-                                            <a href="<?php echo $v; ?>">
-                                                <i class="fa fa-<?php echo $social[$k]; ?>" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </li>
-                            <?php endif; ?>
-                            
-                        </ul>
-                    </div>
-                    <!-- Header Top Left End -->
-                    <!-- Header Top Right Start -->
-                    <div class="header-top-right order-1 order-lg-2">
-                        <ul>
-                            <li>
-                                <a href="#">USD $
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                                <!-- Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="#">EUR €</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">USD $</a>
-                                    </li>
-                                </ul>
-                                <!-- Dropdown End -->
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/header/1.jpg" alt="language-selector">English
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                                <!-- Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="#">
-                                            <img src="img/header/1.jpg" alt="language-selector">English</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="img/header/2.jpg" alt="language-selector">Francis</a>
-                                    </li>
-                                </ul>
-                                <!-- Dropdown End -->
-                            </li>
-                            <li>
-                                <a href="#">Setting
-                                    <i class="fa fa-angle-down"></i>
-                                </a>
-                                <!-- Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="compare.html">compare products</a>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">my account</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">my wishlist</a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">sign in</a>
-                                    </li>
-                                </ul>
-                                <!-- Dropdown End -->
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Header Top Right End -->
-                </div>
-            </div>
-        </div>
-        <!-- Container End -->
-    </div>
-    <!-- Header Top End Here -->
-    <!-- Header Middle Start Here -->
-    <div class="header-middle stick header-sticky">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Logo Start -->
-                <div class="col-xl-3 col-lg-2 col-6">
-                    <div class="logo">
-                        <a href="<?php echo $BASE_URL; ?>">
-                            <img src="<?php echo $settings['company']['logo']; ?>" alt="logo-image">
-                        </a>
-                    </div>
-                </div>
-                <!-- Logo End -->
-                <!-- Menu Area Start Here -->
-                <div class="col-xl-7 col-lg-8 d-none d-lg-block">
-                    <nav>
-                        <ul class="header-bottom-list d-flex">
-                            <li class="active">
-                                <a class="drop-icon" href="index.html">home</a>
-                                <!-- Home Version Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="index.html">Home Style 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-2.html">Home Style 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-3.html">Home Style 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-4.html">Home Style 4</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-5.html">Home Style 5</a>
-                                    </li>
-                                    <li>
-                                        <a href="home-6.html">Home Style 6</a>
-                                    </li>
-                                </ul>
-                                <!-- Home Version Dropdown End -->
-                            </li>
-                            <li>
-                                <a class="drop-icon" href="shop.html">elements</a>
-                                <!--  Mega-Menu Start -->
-                                <ul class="ht-dropdown megamenu megamenu-three ">
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">Earrings</li>
-                                            <li>
-                                                <a href="shop.html">Document</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dropcap</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dummy Image</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dummy Text</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Fancy Text</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">Necklaces</li>
-                                            <li>
-                                                <a href="shop.html">Flickr</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Flip Box</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Frame</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Gallery</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Cocktail</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">Bracelets</li>
-                                            <li>
-                                                <a href="shop.html">Platform Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Storage Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Regular Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Sleigh Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Laundry</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                </ul>
-                                <!-- Mega-Menu End -->
-                            </li>
-                            <li>
-                                <a class="drop-icon" href="shop.html">Beauty</a>
-                                <!--  Mega-Menu Start -->
-                                <ul class="ht-dropdown megamenu megamenu-three ">
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">portfolio</li>
-                                            <li>
-                                                <a href="shop.html">Fusions & Fashions</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Style Statements</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Bangs and Fringes</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Expert Musings</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Style D Dress</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">popover</li>
-                                            <li>
-                                                <a href="shop.html">Platform Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Storage Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Regular Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Sleigh Beds</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Laundry</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                    <!-- Single Column Start -->
-                                    <li>
-                                        <ul>
-                                            <li class="menu-tile">promotion</li>
-                                            <li>
-                                                <a href="shop.html">Document</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dropcap</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dummy Image</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Dummy Text</a>
-                                            </li>
-                                            <li>
-                                                <a href="shop.html">Fancy Text</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- Single Column End -->
-                                </ul>
-                                <!-- Mega-Menu End -->
-                            </li>
-                            <li>
-                                <a class="drop-icon" href="shop.html">shop</a>
-                                <!-- Home Version Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="shop.html">Shop</a>
-                                    </li>
-                                    <li>
-                                        <a href="product-details.html">product details</a>
-                                    </li>
-                                    <li>
-                                        <a href="compare.html">compare</a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.html">cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html">checkout</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">wishlist</a>
-                                    </li>
-                                </ul>
-                                <!-- Home Version Dropdown End -->
-                            </li>
-                            <li>
-                                <a class="drop-icon" href="blog.html">blog</a>
-                                <!-- Home Version Dropdown Start -->
-                                <ul class="ht-dropdown blog-dropdown">
-                                    <li>
-                                        <a href="blog-details.html">Blog Details</a>
-                                    </li>
-                                </ul>
-                                <!-- Home Version Dropdown End -->
-                            </li>
-                            <li>
-                                <a class="drop-icon" href="#">pages</a>
-                                <!-- Home Version Dropdown Start -->
-                                <ul class="ht-dropdown">
-                                    <li>
-                                        <a href="contact.html">contact us</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">about us</a>
-                                    </li>
-                                    <li>
-                                        <a href="register.html">register</a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="404.html">404</a>
-                                    </li>
-                                    <li>
-                                        <a href="forgot-password.html">forgot password</a>
-                                    </li>
-                                </ul>
-                                <!-- Home Version Dropdown End -->
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Menu Area End Here -->
-                <!-- Cart Box Start Here -->
-                <div class="col-xl-2 col-lg-2 col-6">
-                    <div class="cart-box">
-                        <ul>
-                            <!-- Search Box Start Here -->
-                            <li>
-                                <a href="#">
-                                    <span class="pe-7s-search"></span>
-                                </a>
-                                <div class="categorie-search-box ht-dropdown">
-                                    <form action="#">
-                                        <input type="text" name="search" placeholder="Search our catalog">
-                                        <button>
-                                            <span class="pe-7s-search"></span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </li>
-                            <!-- Categorie Search Box End Here -->
-                            <li>
-                                <a href="#">
-                                    <span class="pe-7s-shopbag"></span>
-                                    <span class="total-pro">2</span>
-                                </a>
-                                <ul class="ht-dropdown cart-box-width">
-                                    <li>
-                                        <!-- Cart Box Start -->
-                                        <div class="single-cart-box">
-                                            <div class="cart-img">
-                                                <a href="#">
-                                                    <img src="img/products/p1.jpg" alt="cart-image">
-                                                </a>
-                                                <span class="pro-quantity">1X</span>
-                                            </div>
-                                            <div class="cart-content">
-                                                <h6>
-                                                    <a href="cart.html">Modern Eye Brush </a>
-                                                </h6>
-                                                <span class="cart-price">27.45</span>
-                                                <span>Size: S</span>
-                                                <span>Color: Yellow</span>
-                                            </div>
-                                            <a class="del-icone" href="#">
-                                                <i class="ion-close"></i>
-                                            </a>
-                                        </div>
-                                        <!-- Cart Box End -->
-                                        <!-- Cart Box Start -->
-                                        <div class="single-cart-box">
-                                            <div class="cart-img">
-                                                <a href="#">
-                                                    <img src="img/products/p2.jpg" alt="cart-image">
-                                                </a>
-                                                <span class="pro-quantity">1X</span>
-                                            </div>
-                                            <div class="cart-content">
-                                                <h6>
-                                                    <a href="cart.html">Flat Velvet Lipstick</a>
-                                                </h6>
-                                                <span class="cart-price">45.00</span>
-                                                <span>Size: XL</span>
-                                                <span>Color: Green</span>
-                                            </div>
-                                            <a class="del-icone" href="#">
-                                                <i class="ion-close"></i>
-                                            </a>
-                                        </div>
-                                        <!-- Cart Box End -->
-                                        <!-- Cart Footer Inner Start -->
-                                        <div class="cart-footer">
-                                            <ul class="price-content">
-                                                <li>Subtotal
-                                                    <span>$57.95</span>
-                                                </li>
-                                                <li>Shipping
-                                                    <span>$7.00</span>
-                                                </li>
-                                                <li>Taxes
-                                                    <span>$0.00</span>
-                                                </li>
-                                                <li>Total
-                                                    <span>$64.95</span>
-                                                </li>
-                                            </ul>
-                                            <div class="cart-actions text-center">
-                                                <a class="cart-checkout" href="checkout.html">Checkout</a>
-                                            </div>
-                                        </div>
-                                        <!-- Cart Footer Inner End -->
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Cart Box End Here -->
-            </div>
-            <!-- Row End -->
-            <!-- Mobile Menu Start Here -->
-            <div class="mobile-menu d-block d-lg-none">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">home</a>
-                            <!-- Home Version Dropdown Start -->
-                            <ul>
-                                <li>
-                                    <a href="index.html">Home Style 1</a>
-                                </li>
-                                <li>
-                                    <a href="home-2.html">Home Style 2</a>
-                                </li>
-                                <li>
-                                    <a href="home-3.html">Home Style 3</a>
-                                </li>
-                                <li>
-                                    <a href="home-4.html">Home Style 4</a>
-                                </li>
-                                <li>
-                                    <a href="home-5.html">Home Style 5</a>
-                                </li>
-                                <li>
-                                    <a href="home-6.html">Home Style 6</a>
-                                </li>
-                            </ul>
-                            <!-- Home Version Dropdown End -->
-                        </li>
-                        <li>
-                            <a href="#">elements</a>
-                            <!-- Men Accessories Dropdown Start -->
-                            <ul class="submobile-mega-dropdown">
-                                <li>
-                                    <a href="#">Earrings</a>
-                                    <!-- Watches Dropdown Start -->
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Document</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dropcap</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dummy Image</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dummy Text</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Fancy Text</a>
-                                        </li>
-                                    </ul>
-                                    <!-- Watches Dropdown End -->
-                                </li>
-                                <li>
-                                    <a href="#">Necklaces</a>
-                                    <!-- Shoes Dropdown Start -->
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Flickr</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Flip Box</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Frame</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Gallery</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Cocktail</a>
-                                        </li>
-                                    </ul>
-                                    <!-- Shoes Dropdown End -->
-                                </li>
-                                <li>
-                                    <a href="#">Bracelets</a>
-                                    <!-- Bags Dropdown Start -->
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Platform Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Storage Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Regular Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Sleigh Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Laundry</a>
-                                        </li>
-                                    </ul>
-                                    <!-- Bags Dropdown End -->
-                                </li>
-                            </ul>
-                            <!-- Men Accessories Dropdown End -->
-                        </li>
-                        <li>
-                            <a href="#">Beauty</a>
-                            <!-- Women Accessories Dropdown Start -->
-                            <ul class="submobile-mega-dropdown">
-                                <!-- Dress Dropdown Start -->
-                                <li>
-                                    <a href="#">portfolio</a>
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Fusions & Fashions</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Style Statements</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Bangs and Fringes</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Expert Musings</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Style D Dress</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- Dress Dropdown End -->
-                                <!-- shoes Dropdown Start -->
-                                <li>
-                                    <a href="#">popover</a>
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Platform Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Storage Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Regular Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Sleigh Beds</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Laundry</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- shoes Dropdown End -->
-                                <!-- Bags Dropdown Start -->
-                                <li>
-                                    <a href="#">promotion</a>
-                                    <ul>
-                                        <li>
-                                            <a href="shop.html">Document</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dropcap</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dummy Image</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Dummy Text</a>
-                                        </li>
-                                        <li>
-                                            <a href="shop.html">Fancy Text</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- Bags Dropdown End -->
-                            </ul>
-                            <!-- Women Accessories Dropdown Start -->
-                        </li>
-                        <li>
-                            <a href="#">shop</a>
-                            <!-- Mobile Menu Dropdown Start -->
-                            <ul>
-                                <li>
-                                    <a href="shop.html">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="product-details.html">product details</a>
-                                </li>
-                                <li>
-                                    <a href="compare.html">compare</a>
-                                </li>
-                                <li>
-                                    <a href="cart.html">cart</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">checkout</a>
-                                </li>
-                                <li>
-                                    <a href="wishlist.html">wishlist</a>
-                                </li>
-                            </ul>
-                            <!-- Mobile Menu Dropdown End -->
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                            <!-- Mobile Menu Dropdown Start -->
-                            <ul>
-                                <li>
-                                    <a href="blog.html">blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details.html">Blog Details</a>
-                                </li>
-                            </ul>
-                            <!-- Mobile Menu Dropdown End -->
-                        </li>
-                        <li>
-                            <a href="#">pages</a>
-                            <!-- Mobile Menu Dropdown Start -->
-                            <ul>
-                                <li>
-                                    <a href="about.html">about us</a>
-                                </li>
-                                <li>
-                                    <a href="account.html">My account</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">register</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="404.html">404</a>
-                                </li>
-                                <li>
-                                    <a href="forgot-password.html">forgot password</a>
-                                </li>
-                            </ul>
-                            <!-- Mobile Menu Dropdown End -->
-                        </li>
-                        <li>
-                            <a href="contact.html">contact us</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- Mobile Menu End Here -->
-        </div>
-        <!-- Container End -->
-    </div>
-    <!-- Header Middle End Here -->
-</header>
-<!-- Main Header Area End Here -->
