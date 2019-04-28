@@ -5,8 +5,8 @@
     <div class="blog-list-wapper">
         <ul id="blog_slider" class="owl-carousel all">
             <?php
-            for ($i = 0; $i < 12; $i++) {
-                echo $this->element('Layout/news_item');
+            foreach ($posts as $post) {
+                echo $this->element('Layout/news_item', array('post' => $post));
             }
             ?>
         </ul>

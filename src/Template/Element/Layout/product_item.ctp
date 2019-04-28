@@ -1,9 +1,9 @@
 <div class="left-block">
     <a href="#"  title="">
-        <img class="img-responsive" alt="product" src="https://product.hstatic.net/1000036599/product/0001279_natural-sun-eco-ice-air-puff-sun-spf50-pa_540_medium.jpeg"/>
+        <img class="img-responsive" alt="product" src="<?php echo $product['image'];?>"/>
     </a>
     <div class="quick-view">
-        <a title="Xem chi tiết" class="compare" href="#"></a>
+        <a title="Xem chi tiết" class="compare" href="<?php echo $BASE_URL.'san-pham'.$product['url'];?>"></a>
         <a href="javascript:;" class="qv-e-button btn-quickview-1 search" title="Xem nhanh" data-handle="https://bookeeng.xyz/faceshop/ajaxproductdetail.php"></a>
     </div>
     <div class="add-to-cart">
@@ -11,21 +11,14 @@
     </div>
 </div>
 <div class="right-block">
-    <h5 class="product-name"><a href="#">Sữa Chống Nắng Hạ Nhiệt Làn Da NATURAL SUN ECO ICE AIR PUFF SUN SPF50+PA+++</a></h5>
+    <h5 class="product-name"><a href="<?php echo $BASE_URL.'san-pham'.$product['url'];?>"><?php echo $product['name'];?></a></h5>
     <div class="content_price">
-        <span class="price product-price" >679,000₫</span>
-        <span class="price old-price">715,000₫</span>
-        <div class="haravan-product-reviews-badge" data-id="1019618619">
-            <div class="hrv-product-reviews-star" data-score="0" data-number="5" title="Not rated yet!" style="color: rgb(236, 186, 85);">
-                <i data-alt="1" class="star-off-png" title="Not rated yet!"></i>&nbsp;
-                <i data-alt="2" class="star-off-png" title="Not rated yet!"></i>&nbsp;
-                <i data-alt="3" class="star-off-png" title="Not rated yet!"></i>&nbsp;
-                <i data-alt="4" class="star-off-png" title="Not rated yet!"></i>&nbsp;
-                <i data-alt="5" class="star-off-png" title="Not rated yet!"></i>
-                <input name="score" type="hidden" readonly="">
-            </div>
-            <p>(0 đánh giá)</p>
-        </div>
+        <?php if (!empty($product['discount_price'])): ?>
+        <span class="price product-price"><?php echo number_format($product['price']-$product['discount_price']);?>₫</span>
+        <span class="price old-price"><?php echo number_format($product['price']);?>₫</span>
+        <?php else: ?>
+        <span class="price product-price"><?php echo number_format($product['price']);?>₫</span>
+        <?php endif; ?>
     </div>
     <div class="info-orther">
         <p>Mã sản phẩm: EC19-TFS04-140</p>

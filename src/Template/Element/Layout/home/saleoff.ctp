@@ -6,15 +6,15 @@
                     <span class="page-heading-title">
                         KHUYẾN MÃI HOT
                     </span>
-                    <span class="xemtatca"><a href="#">Xem thêm</a></span>
+                    <span class="xemtatca"><a href="<?php echo $BASE_URL;?>/khuyen-mai-hot">Xem thêm</a></span>
                 </h2>
                 <div class="latest-deals-product">
                     <ul class="product-list owl-carousel">
-                        <?php for ($i = 0; $i < 12; $i++) { ?>
+                        <?php foreach ($hot_products as $hp): ?>
                             <li >
-                                <?php echo $this->element('Layout/product_item'); ?>
+                                <?php echo $this->element('Layout/product_item', array('product' => $hp)); ?>
                             </li>
-                        <?php } ?>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
