@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -12,6 +13,7 @@
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Controller;
 
 use Cake\Controller\Controller;
@@ -28,9 +30,8 @@ use App\Lib\Api;
  *
  * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
-{
-    
+class AppController extends Controller {
+
     /** @var object $controller Controller name. */
     public $controller = null;
 
@@ -50,8 +51,7 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
-    {
+    public function initialize() {
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
@@ -64,7 +64,7 @@ class AppController extends Controller
         $this->loadComponent('Security');
         $this->loadComponent('Csrf');
     }
-    
+
     /**
      * Before filter event
      * @param Event $event
@@ -84,12 +84,12 @@ class AppController extends Controller
             }
         }
         parent::beforeFilter($event);
-        
+
         // Start session
         if (empty($this->request->session()->id())) {
             $this->request->session()->start();
         }
-        
+
         $this->session = $this->request->session();
         $this->controller = strtolower($this->request->params['controller']);
         $this->action = strtolower($this->request->params['action']);
@@ -104,17 +104,16 @@ class AppController extends Controller
      * @param \Cake\Event\Event $event The beforeRender event.
      * @return \Cake\Http\Response|null|void
      */
-    public function beforeRender(Event $event)
-    {
+    public function beforeRender(Event $event) {
         // Note: These defaults are just to get started quickly with development
         // and should not be used in production. You should instead set "_serialize"
         // in each action as required.
         if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
+                in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
         }
-        
+
         // Set common param
         $this->set('session', $this->session);
         $this->set('cookie', $this->Cookie);
@@ -123,14 +122,15 @@ class AppController extends Controller
         $this->set('current_url', $this->current_url);
         $this->set('BASE_URL', $this->BASE_URL);
         $this->set('isMobile', $this->isMobile());
-        
+
         // Set common data
         $this->set('_settings', $this->_settings);
-        
+        $this->set('productCates', $this->getProductCates());
+
         // Set default layout
         $this->setLayout();
     }
-    
+
     /**
      * Common function set layout for view.
      */
@@ -141,15 +141,32 @@ class AppController extends Controller
             $this->viewBuilder()->layout('lyona');
         }
     }
-    
+
     public function isMobile() {
         return $this->RequestHandler->isMobile();
     }
-    
+
     // Get list cates
     public function getSettings() {
         $data = array();
         $data = Api::call(Configure::read('API.url_settings_general'), array());
         return $data;
     }
+
+    // Get product cates
+    public function getProductCates() {
+        $productCates = array();
+        $_tmpPC = !empty($this->_settings['product_cates']) ? $this->_settings['product_cates'] : array();
+        if (!empty($_tmpPC)) {
+            foreach ($_tmpPC as $pc) {
+                if (empty($pc['parent_id'])) {
+                    $productCates[$pc['id']]['data'] = $pc;
+                } else {
+                    $productCates[$pc['parent_id']]['child_data'][$pc['id']] = $pc;
+                }
+            }
+        }
+        return $productCates;
+    }
+
 }

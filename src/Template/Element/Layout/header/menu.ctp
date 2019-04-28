@@ -1,16 +1,3 @@
-<?php
-$productCates = array();
-$_tmpPC = !empty($_settings['product_cates']) ? $_settings['product_cates'] : array();
-if (!empty($_tmpPC)) {
-    foreach ($_tmpPC as $pc) {
-        if (empty($pc['parent_id'])) {
-            $productCates[$pc['id']]['data'] = $pc;
-        } else {
-            $productCates[$pc['parent_id']]['child_data'][] = $pc;
-        }
-    }
-}
-?>
 <div id="navMaiaMenu" class="navbarNav">
     <ul class="list nav">
         <li class="active">
