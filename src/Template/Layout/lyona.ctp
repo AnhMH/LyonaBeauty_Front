@@ -1,8 +1,8 @@
 <?php
-$_description = !empty($pageDescription) ? $pageDescription : $settings['web_description'];
-$_keyword = !empty($pageKeyword) ? $pageKeyword : $settings['web_keyword'];
-$_title = !empty($pageTitle) ? $pageTitle : $settings['web_title'];
-$_image = !empty($pageImage) ? $pageImage : $settings['web_image'];
+$_description = !empty($pageDescription) ? $pageDescription : $_settings['company']['seo_description'];
+$_keyword = !empty($pageKeyword) ? $pageKeyword : $_settings['company']['seo_keyword'];
+$_title = !empty($pageTitle) ? $pageTitle : $_settings['company']['name'];
+$_image = !empty($pageImage) ? $pageImage : $_settings['company']['seo_image'];
 $_time = time();
 ?>
 <!DOCTYPE html>

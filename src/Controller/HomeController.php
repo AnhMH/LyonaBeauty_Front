@@ -17,9 +17,5 @@ class HomeController extends AppController {
         $data = array();
         $data = Api::call(Configure::read('API.url_settings_gethomedata'), array());
         $this->set('data', $data);
-        
-//        echo '<pre>';
-//        print_r($data);
-//        die();
     }
 }

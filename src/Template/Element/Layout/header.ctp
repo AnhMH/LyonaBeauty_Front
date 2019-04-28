@@ -10,8 +10,8 @@
                     <div class="col-xs-10 col-sm-3 col-md-4 logo">
                         <div class="infoShop">
                             <ul class="list line clearfix">
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> 0968863377&nbsp;</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i> tfsonline@hsvgroup.com.vn</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $_settings['company']['tel'];?></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo $_settings['company']['email'];?></li>
                             </ul>
                         </div>
                     </div>
@@ -70,8 +70,8 @@
                         <div class="mainLogo">
                             <a href="#nav-menu" class="mm-icon-menu visible-sm visible-xs"><span></span></a>
                             <div>
-                                <a href="/">
-                                    <img alt="THEFACESHOP" src="//theme.hstatic.net/1000036599/1000401525/14/logo2.png?v=1195">
+                                <a href="<?php echo $BASE_URL;?>">
+                                    <img alt="<?php echo $_settings['company']['name'];?>" src="<?php echo $_settings['company']['logo'];?>">
                                 </a>
                             </div>
                         </div>
@@ -79,109 +79,7 @@
                     <!--/mainLogo-->
                     <!--mainDesktopMenus-->
                     <div class="col-xs-1 col-sm-6 col-md-7 header-search-box hidden-sm hidden-xs">
-                        <div id="navMaiaMenu" class="navbarNav">
-                            <ul class="list nav">
-                                <li class="active">
-                                    <a class=" current " href="/" target="_self">
-                                        Trang chủ
-                                    </a>
-                                </li>
-                                <li class="hasChild ">
-                                    <a class=" colorRed" href="#" title="Khuyến mãi" target="_self">
-                                        <span class="">Khuyến mãi</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="tfsDropdow level1" role="menu">
-                                        <li class="">
-                                            <a href="/collections/cushion-mua-1-tang-1-1-30" title="Cushion - Mua 1 Tặng 1"><span>Cushion - Mua 1 Tặng 1</span> </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="/collections/cushion-mua-1-tang-1-1-30" title="Cushion - Mua 1 Tặng 1"><span>Cushion - Mua 1 Tặng 1</span> </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="hasChild megaItem ">
-                                    <a class=" " href="#" title="Dòng sản phẩm" target="_self">
-                                        <span class="">Dòng sản phẩm</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </a>
-                                    <div class="tfsDropdow levelMega">
-                                        <div class="row">
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 columnMega">
-                                                <div class="wrap">
-                                                    <ul class="list">
-                                                        <li class="head"><a href="#">Dưỡng da</a></li>
-                                                        <li>
-                                                            <a href="#" title="THEFACESHOP cushion">
-                                                                <span>Demo aa a a a a </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php echo $this->element('Layout/header/menu'); ?>
                     </div>
                     <!--/mainDesktopMenus-->
                     <!--Account + Cart buttons-->

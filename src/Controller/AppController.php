@@ -125,7 +125,7 @@ class AppController extends Controller
         $this->set('isMobile', $this->isMobile());
         
         // Set common data
-        $this->set('settings', $this->_settings);
+        $this->set('_settings', $this->_settings);
         
         // Set default layout
         $this->setLayout();
