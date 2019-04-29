@@ -933,3 +933,6 @@ span.text-show {
 	color: red;
 	font-weight: bold;
 }
+.browse-tags {
+    right: 0;
+}

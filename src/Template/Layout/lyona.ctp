@@ -28,7 +28,7 @@ $_time = time();
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/bootstrap.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/flex.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/main.css" media="all">
-        <link href="<?php echo $BASE_URL;?>/css/style_new.css" rel="stylesheet" type="text/css" media="all">
+        <link href="<?php echo $BASE_URL;?>/css/style_new.css?<?php echo time();?>" rel="stylesheet" type="text/css" media="all">
         
         <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.3.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/owl.min.js"></script>

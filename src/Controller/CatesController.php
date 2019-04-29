@@ -23,7 +23,7 @@ class CatesController extends AppController {
                 $ids[] = $c['id'];
                 $rootId = $c['id'];
             }
-            if (!empty($rootId) && $c['root_id'] == $rootId) {
+            if (!empty($rootId) && $c['parent_id'] == $rootId) {
                 $ids[] = $c['id'];
             }
         }

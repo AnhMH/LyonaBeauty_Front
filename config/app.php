@@ -344,5 +344,7 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
+        'cookie' => 'LyonaCookies',
+        'timeout' => 24*60, // 1day
     ],
 ];

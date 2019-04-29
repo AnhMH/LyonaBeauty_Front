@@ -55,8 +55,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/tin-tuc/*', ['controller' => 'Articles', 'action' => 'index']);
-    $routes->connect('/danh-muc/*', ['controller' => 'Cates', 'action' => 'index']);
-    $routes->connect('/san-pham/*', ['controller' => 'Products', 'action' => 'index']);
+    $routes->connect('/danh-muc/*', ['controller' => 'Products', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
