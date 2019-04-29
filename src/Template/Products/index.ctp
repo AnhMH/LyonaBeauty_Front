@@ -24,21 +24,21 @@
                                     <ul class="tree-menu">
                                         <?php if (!empty($productCates)): ?>
                                         <?php foreach ($productCates as $pc): ?>
-                                        <li class=" has-child">
+                                        <li class="<?php echo !empty($pc['child_data']) ? 'has-child' : '';?>">
                                             <span></span>
                                             <a class="dropdown-toggle has-category parent" href="<?php echo $BASE_URL.'/danh-muc/'.$pc['data']['url'];?>" title="<?php echo $pc['data']['name'];?>" target="_self">
-                                                <span class="">SALE</span>
+                                                <span class=""><?php echo $pc['data']['name'];?></span>
                                             </a>
+                                            <?php if (!empty($pc['child_data'])): ?>
                                             <ul class="sc2" role="menu">
+                                                <?php foreach ($pc['child_data'] as $cv): ?>
                                                 <li class="clearfix" >
                                                     <span></span>
-                                                    <a href="#"title="100 Sản Phẩm Giá 0Đ">100 Sản Phẩm Giá 0Đ</a>
+                                                    <a href="<?php echo $BASE_URL.'/danh-muc/'.$cv['url'];?>" title="<?php echo $cv['name'];?>"><?php echo $cv['name'];?></a>
                                                 </li>
-                                                <li class="clearfix" >
-                                                    <span></span>
-                                                    <a href="#"title="Combo Hot Giảm Đến 50%">Combo Hot Giảm Đến 50%</a>
-                                                </li>
+                                                <?php endforeach; ?>
                                             </ul>
+                                            <?php endif; ?>
                                         </li>
                                         <?php endforeach; ?>
                                         <?php endif;?>

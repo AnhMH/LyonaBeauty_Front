@@ -17,8 +17,8 @@ class ProductsController extends AppController {
         $ids = array();
         $rootId = '';
         $cateName = '';
-        $limit = 1;
-        $cates = !empty($this->_settings['product_cates']) ? $this->_settings['product_cates'] : '';
+        $limit = 18;
+        $cates = !empty($this->_settings['product_cates']) ? $this->_settings['product_cates'] : array();
         foreach ($cates as $c) {
             if ($c['url'] == $url) {
                 $ids[] = $c['id'];
