@@ -63,10 +63,10 @@ class ProductsController extends AppController {
                 'url' => $url,
                 'get_new_products' => 1
             ));
-            $pageImage = !empty($data['product']['image']) ? $data['product']['image'] : '';
-            $pageTitle = !empty($data['product']['name']) ? $data['product']['name'] : '';
-            $pageDescription = !empty($data['product']['seo_description']) ? $data['product']['seo_description'] : '';
-            $pageKeyword = !empty($data['product']['seo_keyword']) ? $data['product']['seo_keyword'] : '';
+            $pageImage = !empty($data['image']) ? $data['image'] : '';
+            $pageTitle = !empty($data['name']) ? $data['name'] : '';
+            $pageDescription = !empty($data['seo_description']) ? $data['seo_description'] : '';
+            $pageKeyword = !empty($data['seo_keyword']) ? $data['seo_keyword'] : '';
         }
         $this->set(compact(
             'data',

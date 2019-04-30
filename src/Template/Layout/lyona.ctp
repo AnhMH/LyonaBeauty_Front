@@ -1,4 +1,5 @@
 <?php
+$webTitle = 'LyonaBeauty.Com';
 $_description = !empty($pageDescription) ? $pageDescription : $_settings['company']['seo_description'];
 $_keyword = !empty($pageKeyword) ? $pageKeyword : $_settings['company']['seo_keyword'];
 $_title = !empty($pageTitle) ? $pageTitle : $_settings['company']['name'];
@@ -14,6 +15,24 @@ $_time = time();
             <?php echo $_title; ?>
         </title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0" name="viewport">
+        <meta name="description" itemprop="description" content="<?php echo $_description; ?>" />
+        <meta name="keywords" content="<?php echo $_keyword; ?>">
+        
+        <meta property="og:title" content="<?php echo $_title; ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="<?php echo $current_url;?>" />
+        <meta property="og:image" content="<?php echo $_image; ?>" />
+        <meta property="og:site_name" content="<?php echo $webTitle; ?>" />
+        <meta property="og:description" content="<?php echo $_description; ?>" />
+       
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="<?php echo $_title; ?>" />
+        <meta name="twitter:description" content="<?php echo $_description; ?>" />
+        <meta name="twitter:image" content="<?php echo $_image; ?>" />
+        <meta itemprop="image" content="<?php echo $_image; ?>" />
+        
+        <meta name="generator" content="<?php echo $webTitle; ?>" />
+        
         <link href="<?php echo $BASE_URL;?>/css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all">
         <style>
             #new-menu .t-menu li.saving_day_css a {
