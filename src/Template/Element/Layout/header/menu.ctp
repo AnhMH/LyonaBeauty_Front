@@ -54,7 +54,7 @@
             </ul>
         </li>
         <li class="">
-            <a class="" href="<?php echo $BASE_URL; ?>" target="_self">
+            <a class="" href="<?php echo $BASE_URL; ?>/lien-he" target="_self">
                 Liên hệ
             </a>
         </li>
