@@ -47,4 +47,33 @@ class ProductsController extends AppController {
             'pageTitle'
         ));
     }
+    
+    /**
+     * Product detail
+     */
+    public function detail($url = '') {
+        $data = array();
+        $pageImage = '';
+        $pageTitle = '';
+        $pageDescription = '';
+        $pageKeyword = '';
+
+        if (!empty($url)) {
+            $data = Api::call(Configure::read('API.url_products_detail'), array(
+                'url' => $url,
+                'get_new_products' => 1
+            ));
+            $pageImage = !empty($data['product']['image']) ? $data['product']['image'] : '';
+            $pageTitle = !empty($data['product']['name']) ? $data['product']['name'] : '';
+            $pageDescription = !empty($data['product']['seo_description']) ? $data['product']['seo_description'] : '';
+            $pageKeyword = !empty($data['product']['seo_keyword']) ? $data['product']['seo_keyword'] : '';
+        }
+        $this->set(compact(
+            'data',
+            'pageImage',
+            'pageTitle',
+            'pageDescription',
+            'pageKeyword'
+        ));
+    }
 }
