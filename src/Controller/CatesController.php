@@ -11,14 +11,14 @@ use Cake\Core\Configure;
 
 class CatesController extends AppController {
     /**
-     * People top page
+     * List cate
      */
     public function index($url = '') {
         // Init
         $ids = array();
         $rootId = '';
         $cateName = '';
-        $limit = 1;
+        $limit = 18;
         $cates = !empty($this->_settings['blog_cates']) ? $this->_settings['blog_cates'] : array();
         
         // Get cate id
@@ -53,6 +53,38 @@ class CatesController extends AppController {
             'param',
             'cateName',
             'pageTitle',
+            'newPosts'
+        ));
+    }
+    
+    /**
+     * Cate detail
+     */
+    public function detail($url = '') {
+        $data = array();
+        $pageImage = '';
+        $pageTitle = '';
+        $pageDescription = '';
+        $pageKeyword = '';
+        $newPosts = array();
+
+        if (!empty($url)) {
+            $data = Api::call(Configure::read('API.url_posts_detail'), array(
+                'url' => $url,
+                'get_new_posts' => 1
+            ));
+            $newPosts = !empty($data['new_posts']) ? $data['new_posts'] : array();
+            $pageImage = !empty($data['image']) ? $data['image'] : '';
+            $pageTitle = !empty($data['name']) ? $data['name'] : '';
+            $pageDescription = !empty($data['seo_description']) ? $data['seo_description'] : '';
+            $pageKeyword = !empty($data['seo_keyword']) ? $data['seo_keyword'] : '';
+        }
+        $this->set(compact(
+            'data',
+            'pageImage',
+            'pageTitle',
+            'pageDescription',
+            'pageKeyword',
             'newPosts'
         ));
     }

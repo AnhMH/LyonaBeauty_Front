@@ -55,6 +55,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/tin-tuc/*', ['controller' => 'Cates', 'action' => 'index']);
+    $routes->connect('/bai-viet/*', ['controller' => 'Cates', 'action' => 'detail']);
     $routes->connect('/danh-muc/*', ['controller' => 'Products', 'action' => 'index']);
     $routes->connect('/san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
 
