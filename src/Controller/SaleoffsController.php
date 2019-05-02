@@ -18,7 +18,8 @@ class SaleoffsController extends AppController {
         $param = $this->getParams(array(
             'limit' => $limit,
             'disable' => 0,
-            'is_sale_off'
+            'is_sale_off' => 1,
+            'sort' => 'discount_price-desc'
         ));
         $pageTitle = $cateName = 'Khuyến mãi';
         $result = Api::call(Configure::read('API.url_products_list'), $param);
