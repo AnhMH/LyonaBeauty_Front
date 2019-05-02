@@ -20,7 +20,8 @@ class SearchController extends AppController {
             'disable' => 0
         ));
         $name = !empty($param['name']) ? $param['name'] : '';
-        $pageTitle = $cateName = "Tìm kiếm từ khoá: <strong>{$name}</strong>";
+        $pageTitle = 'Tìm kiếm';
+        $cateName = "Tìm kiếm từ khoá: <strong>{$name}</strong>";
         $result = Api::call(Configure::read('API.url_products_list'), $param);
         $total = !empty($result['total']) ? $result['total'] : 0;
         $data = !empty($result['data']) ? $result['data'] : array();
