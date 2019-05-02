@@ -20,10 +20,9 @@
                     <div class="col-xs-1 col-sm-6 col-md-5 header-search-box hidden-xs">
                         <a href="javascript:;" class="visible-xs show-search-mobile"><i class="fa fa-search" aria-hidden="true"></i></a>
                         <div class="search-box">
-                            <form class="search form-inline ultimate-search" action="/search">
+                            <form class="search form-inline ultimate-search" action="<?php echo $BASE_URL;?>/tim-kiem">
                                 <div class="form-group input-serach">
-                                    <input type="hidden" name="type" value="product">
-                                    <input type="text" name="q" id="search" class="search_box" placeholder="Tìm kiếm..." value="" autocomplete="off">
+                                    <input type="text" name="name" id="search" class="search_box" placeholder="Tìm kiếm..." value="" autocomplete="off">
                                 </div>
                                 <button id="submit-button" class="pull-right btn-search">
                                     <span class="hidden-xs">Tìm kiếm</span>

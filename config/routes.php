@@ -60,6 +60,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/san-pham/*', ['controller' => 'Products', 'action' => 'detail']);
     $routes->connect('/lien-he/*', ['controller' => 'Contact', 'action' => 'index']);
     $routes->connect('/khuyen-mai-hot/*', ['controller' => 'Saleoffs', 'action' => 'index']);
+    $routes->connect('/tim-kiem/*', ['controller' => 'Search', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
