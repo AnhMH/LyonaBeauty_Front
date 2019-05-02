@@ -1,7 +1,7 @@
 <nav id="nav-menu" class="hidden">
     <ul class="lv1">
         <li><a href="<?php echo $BASE_URL; ?>">Trang chủ</a></li>
-        <li><a href="<?php echo $BASE_URL; ?>/gioi-thieu">Giới thiệu</a></li>
+        <li><a href="<?php echo $BASE_URL; ?>/khuyen-mai-hot">Khuyến mãi</a></li>
         <?php if (!empty($productCates)): ?>
             <?php foreach ($productCates as $pc): ?>
                 <li class="has-children icon icon-arrow-left">

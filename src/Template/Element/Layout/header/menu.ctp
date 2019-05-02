@@ -6,8 +6,8 @@
             </a>
         </li>
         <li class="">
-            <a class="" href="<?php echo $BASE_URL; ?>/gioi-thieu" target="_self">
-                Giới thiệu
+            <a class="" href="<?php echo $BASE_URL; ?>/khuyen-mai-hot" target="_self">
+                Khuyến mãi
             </a>
         </li>
         <li class="hasChild megaItem ">
