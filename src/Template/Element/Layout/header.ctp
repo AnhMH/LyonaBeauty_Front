@@ -102,41 +102,6 @@
                                 </div>
                             </div>
                             <!--/cart-block-->
-                            <!--login-block-->
-                            <div class="btn-cart" id="login-block">
-                                <a title="Đăng nhập" href="#" class="btn-heart hidden-sm hidden-xs">login</a>
-                                <span class="text-show hidden-xs hidden-sm">Tài khoản</span>
-                                <a href="javascript:void(0)" class="visible-sm visible-xs userMB">
-                                    <svg class="icon icon-user" viewBox="0 0 32 32">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user">
-                                    </use>
-                                    </svg>
-                                </a>
-                                <div class="cart-block">
-                                    <button type="button" class="btn btn-trigger" data-toggle="modal" data-target="#modal-login">
-                                        Đăng nhập
-                                    </button>
-                                    <div class="subText">
-                                        <span>Chưa có tài khoản? <a href="/account/register">Đăng ký mới</a></span>
-                                    </div>
-                                    <div class="login-separator"> <hr> <div class="text">hoặc</div> </div>
-                                    <div class="loginApp">
-                                        <button type="button" class="btsocialloginfb">
-                                            <div class="img">
-                                                <img src="images/facebook.png" alt="">
-                                            </div>
-                                            <span>Đăng nhập bằng Facebook</span>
-                                        </button>
-                                        <button type="button" class="btsociallogingg">
-                                            <div class="img">
-                                                <img src="images/googleplus.png" alt="">
-                                            </div>
-                                            <span>Đăng nhập bằng Google</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/login-block-->
                         </div>
                     </div>
                     <!--/Account + Cart buttons-->

@@ -953,3 +953,10 @@ span.text-show {
     background-color: #f2dede;
     border-color: #ebccd1;
 }
+#trademark-list {
+    text-align: center;
+}
+.footer-info-bottom {
+    width: 100% !important;
+    text-align: center !important;
+}
