@@ -49,48 +49,7 @@
         t(window).width() + o() < 1025 ? t("#main-menus li.dropdown:not(.active) >a").attr("data-toggle", "dropdown") : t("#main-menus li.dropdown >a").removeAttr("data-toggle")
     }
     t(document).ready(function() {
-        e(), t(document).on("click", ".add-to-car", function() {
-            var e = t(this).attr("data-variantid"),
-                n = parseInt(1),
-                a = t(this).data("price"),
-                o = t(this).data("image"),
-                i = t(this).data("title"),
-                s = t(this).data("sku"),
-                c = t(this).data("url");
-            t.ajax({
-                type: "GET",
-                url: c + "?view=modal-recommend",
-                success: function(e) {
-                    t("#modal-product .control-wrapper").html(e)
-                }
-            });
-            var l = {
-                type: "POST",
-                url: "/cart/add.js",
-                data: "quantity=" + n + "&id=" + e,
-                dataType: "json",
-                success: function() {
-                    t.ajax({
-                        type: "GET",
-                        url: "/cart.js",
-                        dataType: "json",
-                        success: function(e) {
-                            t("#cart-block .notify, #shopping-cart-box-ontop .cart-items-count").html(e.item_count)
-                        }
-                    }), t.ajax({
-                        type: "GET",
-                        url: "/cart?view=mini",
-                        success: function(e) {
-                            t("#shopping-cart-box-ontop .cart-block, #cart-block .cart-block").html(e)
-                        }
-                    }), t("#modal-product .modal-quantity").html("Số lượng: " + n), t("#modal-product .price-new").html(Haravan.formatMoney(a, "{{amount}}₫")), t("#modal-product .modal-price").html(Haravan.formatMoney(a * n, "{{amount}}₫")), t("#modal-product .product-info h3").html(i), t("#modal-product .modal-sku").html("Mã sản phẩm: " + s), t("#modal-product .product-pic img").attr("src", o), t(".btn-trigger-product").trigger("click")
-                },
-                error: function(t, e) {
-                    Haravan.onError(t, e)
-                }
-            };
-            jQuery.ajax(l)
-        })  , t("#nav-menu").mmenu(), t(".logo .mm-icon-menu").click(function() {
+        e(), t("#nav-menu").mmenu(), t(".logo .mm-icon-menu").click(function() {
             t("#nav-menu").removeClass("hidden")
         }), t(".show-search-mobile").click(function() {
             t(this).parents(".header-search-box").find(".search-box").slideToggle()

@@ -52,6 +52,10 @@ $_time = time();
         <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.3.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/owl.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/jquery.fancybox.js" type="text/javascript"></script>
+        
+        <script src="<?php echo $BASE_URL;?>/js/libjs.js"></script>
+        <script src="<?php echo $BASE_URL;?>/js/theme-script-min.js?<?php echo $_time;?>"></script>
+        <script src="<?php echo $BASE_URL;?>/js/customer-js.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/script_tfs.js?<?php echo $_time;?>" type="text/javascript"></script>
     </head>
 

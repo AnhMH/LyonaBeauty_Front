@@ -266,7 +266,4 @@
     })
 </script>
 <!--End all modal codes-->
-<script src="js/libjs.js"></script>
-<script src="js/theme-script-min.js"></script>
-<script src="js/customer-js.js"></script>
 
