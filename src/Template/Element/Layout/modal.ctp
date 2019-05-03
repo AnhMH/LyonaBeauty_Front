@@ -140,7 +140,48 @@
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</div>
+<div class="modal" id="modal-product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content row">
+            <div class="modal-header col-sm-12">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Bạn vừa thêm vào giỏ hàng</h4>
+            </div>
+            <div class="modal-body col-sm-12">
+                <div class="row">
+                    <div class="col-sm-5 product-pic"></div>
+                    <div class="col-sm-7 product-info">
+                        <h3></h3>
+                        <div class="row clearfix">
+                            <div class="col-xs-6 modal-quantity">Số lượng: <span>1</span></div>
+                            <div class="col-xs-6">
+                                <div class="price-new pull-right"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix bd-top">
+                            <div class="pull-left">Tổng cộng:</div>
+                            <div class="pull-right modal-price"></div>
+                        </div>
+                        <div class="row cart-footer-btns">
+                            <div class="col-sm-6">
+                                <a class="btn-action action-continue" data-dismiss="modal">Tiếp tục mua sắm</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a class="btn-action action-view-cart" href="<?php echo $BASE_URL; ?>/gio-hang">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-wrapper">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->
 <script>
     var callBack = function (variant, selector) {
         if (variant) {

@@ -7,7 +7,7 @@
         <a href="javascript:;" class="qv-e-button btn-quickview-1 search" title="Xem nhanh" data-handle="https://bookeeng.xyz/faceshop/ajaxproductdetail.php"></a>
     </div>-->
     <div class="add-to-cart">
-        <a class="add-to-car" title="Add to Cart" href="javascript:;" data-image="https://product.hstatic.net/1000036599/product/0001279_natural-sun-eco-ice-air-puff-sun-spf50-pa_540_large.jpeg" data-sku="31500179" data-url="#" data-title="Sữa Chống Nắng Hạ Nhiệt Làn Da NATURAL SUN ECO ICE AIR PUFF SUN SPF50+PA+++" data-price="67900000" data-variantid="1026323701">Thêm vào giỏ</a>
+        <a class="add-to-car" title="Add to Cart" href="javascript:;" onclick="return addToCart(<?php echo $product['id'];?>)">Thêm vào giỏ</a>
     </div>
 </div>
 <div class="right-block">

@@ -49,6 +49,13 @@ $_time = time();
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/main.css" media="all">
         <link href="<?php echo $BASE_URL;?>/css/style_new.css?<?php echo time();?>" rel="stylesheet" type="text/css" media="all">
         
+        <script type="text/javascript">
+            var BASE_URL = '<?php echo $BASE_URL; ?>';
+            var controller = '<?php echo $controller; ?>';
+            var action = '<?php echo $action; ?>';
+            var _csrfToken = '<?php echo $this->request->getParam('_csrfToken'); ?>';
+        </script>
+        
         <script src="<?php echo $BASE_URL;?>/js/jquery-1.11.3.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/owl.min.js"></script>
         <script src="<?php echo $BASE_URL;?>/js/jquery.fancybox.js" type="text/javascript"></script>

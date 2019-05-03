@@ -95,9 +95,14 @@
                                     </svg>
                                 </a>
                                 <div class="cart-block">
+                                    <?php if (!empty($cart['html'])): ?>
+                                    <?php echo $cart['html']; ?>
+                                    <?php else: ?>
                                     <div class="cart-empty">
                                         Giỏ hàng của bạn vẫn chưa có sản phẩm nào.
                                     </div>
+                                    <?php endif;?>
+                                    
                                 </div>
                             </div>
                             <!--/cart-block-->

@@ -113,8 +113,15 @@ class AppController extends Controller {
         ) {
             $this->set('_serialize', true);
         }
+        
+        $cart = array();
+        $sessionKey = Configure::read('Config.cartSessionKey');
+        if ($this->session->check($sessionKey)) {
+            $cart = $this->session->read($sessionKey);
+        }
 
         // Set common param
+        $this->set('cart', $cart);
         $this->set('session', $this->session);
         $this->set('cookie', $this->Cookie);
         $this->set('controller', $this->controller);
