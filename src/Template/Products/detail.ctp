@@ -68,10 +68,10 @@
                         </div>
                         <div class="clearfix">
                             <div class="action-cart pull-left">
-                                <a href="javascript:;" class="btn-cart add-cart ">Thêm vào giỏ<span>(Mua nhiều, lợi nhiều)</span></a>
+                                <a href="javascript:;" class="btn-cart add-cart " onclick="return addToCart(<?php echo $data['id'];?>)">Thêm vào giỏ<span>(Mua nhiều, lợi nhiều)</span></a>
                             </div>
                             <div class="action-cart pull-right" style="margin-right: 0">
-                                <a href="javascript:;" class="buy-now available ">Mua nhanh<span>(Đặt ngay, gần hết hàng)</span></a>
+                                <a href="javascript:;" class="buy-now available " onclick="return addToCart2(<?php echo $data['id'];?>)">Mua nhanh<span>(Đặt ngay, gần hết hàng)</span></a>
                             </div>
                         </div>
                         <div class="privacy-bg">

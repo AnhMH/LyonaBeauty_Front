@@ -30,12 +30,47 @@ $('#shipping_district').bind('change', function(){
 	$('#district span').text($(this).find('option:selected').text());
 });
 
+function addToCart2($pId, $qty) {
+    if (typeof $pId == 'undefined') {
+        $pId = false;
+    }
+    if (typeof $qty == 'undefined') {
+        var selectQty = $('#quantity').val();
+        if (selectQty) {
+            $qty = selectQty;
+        } else {
+            $qty = 1;
+        }
+    }
+    if ($pId) {
+        var loader = $('.loader');
+        var $param = {
+            'type': 'POST',
+            'url': BASE_URL + '/ajax/addtocart',
+            'data': {
+                'product_id': $pId,
+                'qty': $qty
+            },
+            'callback': function (result) {
+                window.location.href = BASE_URL + '/gio-hang';
+            }
+        };
+        cms_adapter_ajax($param);
+    }
+    return false;
+}
+
 function addToCart($pId, $qty) {
     if (typeof $pId == 'undefined') {
         $pId = false;
     }
     if (typeof $qty == 'undefined') {
-        $qty = 1;
+        var selectQty = $('#quantity').val();
+        if (selectQty) {
+            $qty = selectQty;
+        } else {
+            $qty = 1;
+        }
     }
     if ($pId) {
         var loader = $('.loader');

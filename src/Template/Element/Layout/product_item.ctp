@@ -7,7 +7,7 @@
         <a href="javascript:;" class="qv-e-button btn-quickview-1 search" title="Xem nhanh" data-handle="https://bookeeng.xyz/faceshop/ajaxproductdetail.php"></a>
     </div>-->
     <div class="add-to-cart">
-        <a class="add-to-car" title="Add to Cart" href="javascript:;" onclick="return addToCart(<?php echo $product['id'];?>)">Thêm vào giỏ</a>
+        <a class="add-to-car" title="Add to Cart" href="javascript:;" onclick="return addToCart(<?php echo $product['id'];?>,1)">Thêm vào giỏ</a>
     </div>
 </div>
 <div class="right-block">
