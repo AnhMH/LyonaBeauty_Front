@@ -46,8 +46,8 @@ $_time = time();
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/fonts.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/bootstrap.css" media="all">
         <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/flex.css" media="all">
-        <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/main.css" media="all">
-        <link href="<?php echo $BASE_URL;?>/css/style_new.css?<?php echo time();?>" rel="stylesheet" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="<?php echo $BASE_URL;?>/css/main.css?<?php echo $_time;?>" media="all">
+        <link href="<?php echo $BASE_URL;?>/css/style_new.css?<?php echo $_time;?>" rel="stylesheet" type="text/css" media="all">
         
         <script type="text/javascript">
             var BASE_URL = '<?php echo $BASE_URL; ?>';

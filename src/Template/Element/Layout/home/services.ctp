@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s1.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s1.png?v=1200" alt="service 1"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s1.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s1.png?v=1200" alt="service 1"></a>
                         </div>
                         <h3 class="title"><a href="#">Giá trị lớn</a></h3>
                     </div>
@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s2.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s2.png?v=1200" alt="service 2"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s2.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s2.png?v=1200" alt="service 2"></a>
                         </div>
                         <h3 class="title"><a href="#">Cách mua hàng</a></h3>
                     </div>
@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s3.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s3.png?v=1200" alt="service 3"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s3.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s3.png?v=1200" alt="service 3"></a>
                         </div>
                         <h3 class="title"><a href="#">Giao hàng</a></h3>
                     </div>
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s4.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s4.png?v=1200" alt="service 4"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s4.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s4.png?v=1200" alt="service 4"></a>
                         </div>
                         <h3 class="title"><a href="#">Tích lũy điểm</a></h3>
                     </div>
@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s5.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s5.png?v=1200" alt="service 5"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s5.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s5.png?v=1200" alt="service 5"></a>
                         </div>
                         <h3 class="title"><a href="#">Sản phẩm</a></h3>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="row">
                     <div class="col-sm-6 image">
                         <div class="icon">
-                            <a href="#"><img class="lazy" src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s6.png?v=1200" data-src="https://theme.hstatic.net/1000036599/1000401525/14/icon-s6.png?v=1200" alt="service 6"></a>
+                            <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s6.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s6.png?v=1200" alt="service 6"></a>
                         </div>
                         <h3 class="title"><a href="#">Thanh toán</a></h3>
                     </div>

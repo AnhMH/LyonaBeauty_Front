@@ -76,7 +76,7 @@
 }
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-	background-image: url('//theme.hstatic.net/1000036599/1000401525/14/fancybox_sprite.png?v=1187');
+	background-image: url('../images/fancybox_sprite.png?v=1187');
 }
 
 #fancybox-loading {
