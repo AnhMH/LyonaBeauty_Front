@@ -52,10 +52,10 @@
                         <div class="icon">
                             <a href="#"><img class="lazy" src="<?php echo $BASE_URL;?>/images/icon-s4.png?v=1200" data-src="<?php echo $BASE_URL;?>/images/icon-s4.png?v=1200" alt="service 4"></a>
                         </div>
-                        <h3 class="title"><a href="#">Tích lũy điểm</a></h3>
+                        <h3 class="title"><a href="#">Khuyến mãi</a></h3>
                     </div>
                     <div class="col-sm-6 text">
-                        Khi đăng ký là thành viên của website, bạn sẽ được hưởng nhiều ưu đãi từ LYONABEAUTY.
+                        Khi mua hàng bạn sẽ được hưởng nhiều ưu đãi từ LYONABEAUTY.
                     </div>
                 </div>
             </div>
