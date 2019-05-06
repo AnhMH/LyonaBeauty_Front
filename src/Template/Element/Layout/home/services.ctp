@@ -10,7 +10,7 @@
                         <h3 class="title"><a href="#">Giá trị lớn</a></h3>
                     </div>
                     <div class="col-sm-6 text">
-                        THEFACESHOP mang đến thiên nhiên cho làn da của bạn.
+                        LYONABEAUTY mang đến thiên nhiên cho làn da của bạn.
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                         <h3 class="title"><a href="#">Giao hàng</a></h3>
                     </div>
                     <div class="col-sm-6 text">
-                        Cho dù bạn ở nơi đâu trên đất nước Việt Nam, THEFACESHOP cũng sẽ giao hàng tận nơi cho bạn.
+                        Cho dù bạn ở nơi đâu trên đất nước Việt Nam, LYONABEAUTY cũng sẽ giao hàng tận nơi cho bạn.
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         <h3 class="title"><a href="#">Tích lũy điểm</a></h3>
                     </div>
                     <div class="col-sm-6 text">
-                        Khi đăng ký là thành viên của website, bạn sẽ được hưởng nhiều ưu đãi từ THEFACESHOP.
+                        Khi đăng ký là thành viên của website, bạn sẽ được hưởng nhiều ưu đãi từ LYONABEAUTY.
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <h3 class="title"><a href="#">Sản phẩm</a></h3>
                     </div>
                     <div class="col-sm-6 text">
-                        Sản phẩm chính hãng, có tem bảo đảm của công ty Hoa Sen Việt.
+                        Sản phẩm chính hãng, có tem bảo đảm của công ty.
                     </div>
                 </div>
             </div>

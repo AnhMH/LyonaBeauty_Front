@@ -64,23 +64,24 @@
                     </div>
                     <!--/search-box-->
                     <!--Top right menus-->
-                    <div class="col-xs-2 col-sm-3 col-md-3 text-center trackingGroup" data-gtm-vis-recent-on-screen-2408055_54="660" data-gtm-vis-first-on-screen-2408055_54="660" data-gtm-vis-total-visible-time-2408055_54="100" data-gtm-vis-has-fired-2408055_54="1">
-                        <ul class="list line clearfix">
-                            <li><a class="store_header" href="javascript:void(0)">Cửa hàng</a></li>
-                            <li><a href="/pages/kiem-tra-don-hang">Theo dõi đơn hàng</a></li>
-                            <li class="careUser"><a href="javascript:void(0)">Chăm sóc khách hàng</a>
-                                <ul class="lisCare tfsDropdow">
-                                    <li><a href="#" style="background: url(images/care_icon_1.png) 5px center no-repeat;">Tài khoản mua hàng</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_2.png) 5px center no-repeat;">Điều khoản mua bán hàng hóa</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_3.png) 5px center no-repeat;">Chính sách tích lũy điểm TFS</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_4.png) 5px center no-repeat;">Chính sách đổi hàng</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_5.png) 5px center no-repeat;">Giao hàng và thanh toán</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_6.png) 5px center no-repeat;">Hướng dẫn sử dụng mã giảm giá trên website Reebok</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_7.png) 5px center no-repeat;">Hướng dẫn thanh toán qua cổng Smartlink</a></li>
-                                    <li><a href="#" style="background: url(images/care_icon_8.png) 5px center no-repeat;">Liên hệ</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="col-xs-2 col-sm-3 col-md-3">
+                        <div class="social-link social-link-top pull-right">
+                            <?php if (!empty($_settings['company']['facebook'])): ?>
+                            <a href="<?php echo $_settings['company']['facebook'];?>" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+                            <?php endif; ?>
+                            <?php if (!empty($_settings['company']['youtube'])): ?>
+                            <a href="<?php echo $_settings['company']['youtube'];?>" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a>
+                            <?php endif; ?>
+                            <?php if (!empty($_settings['company']['google_plus'])): ?>
+                            <a href="<?php echo $_settings['company']['google_plus'];?>" target="_blank" rel="nofollow"><i class="fa fa-google-plus"></i></a>
+                            <?php endif; ?>
+                            <?php if (!empty($_settings['company']['instagram'])): ?>
+                            <a href="<?php echo $_settings['company']['instagram'];?>" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a>
+                            <?php endif; ?>
+                            <?php if (!empty($_settings['company']['zalo'])): ?>
+                            <a href="<?php echo $_settings['company']['zalo'];?>" target="_blank" rel="nofollow"><img class="image-icon-footer" src="https://file.hstatic.net/1000036599/file/zalo.png"></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                     <!--/Top right menus-->
                 </div>

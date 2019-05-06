@@ -960,3 +960,6 @@ span.text-show {
     width: 100% !important;
     text-align: center !important;
 }
+.social-link-top {
+    margin-top: -8px;
+}
