@@ -1,7 +1,3 @@
-<?php if (!empty($cart)):?>
-<?php
-$total = 0;
-?>
 <style>
     #cart {padding: 30px 0;}
     .image img {max-width: 100%;width: 50px;}
@@ -50,7 +46,7 @@ $total = 0;
     }
     a.continue i{margin-right:5px;}
     a.continue:hover{background: #6E9602;color:#fff}
-    .buttons.clearfix button, #check {
+    .buttons.clearfix button, .buttons.clearfix #update-cart, #check {
         background: #6E9602;
         color: #fff;
         border: none;
@@ -113,79 +109,12 @@ $total = 0;
         <!-- Begin empty cart -->
         <div class="row">
             <div id="layout-page" class="col-md-12">
-                <h1 class="fix">Giỏ hàng</h1>
-                <form action="<?php echo $BASE_URL; ?>/gio-hang" method="post" id="cartformpage">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="image">Hình ảnh</th>
-                                <th class="item">Tên sản phẩm</th>
-                                <th class="qty">Số lượng</th>
-                                <th class="price promotion">Đơn giá</th>
-                                <th class="price promotion">Thành tiền</th>
-                                <th class="remove">&nbsp;</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($cart as $k => $v): ?>
-                            <?php
-                            if (!is_numeric($k)) {
-                                continue;
-                            }
-                            $subTotal = $v['price'] * $v['qty'];
-                            $total += $subTotal;
-                            ?>
-                                <tr class="item " data-id="<?php $k;?>">
-                                    <td class="image">
-                                        <div class="product_image">
-                                            <a href="<?php echo $BASE_URL.'/san-pham/'.$v['url'];?>">
-                                                <img src="<?php echo $v['image'];?>">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="item">
-                                        <a href="<?php echo $BASE_URL.'/san-pham/'.$v['url'];?>">
-                                            <strong><?php echo $v['name'];?></strong>
-                                        </a>
-                                    </td>
-                                    <td class="qty">
-                                        <input type="number" name="updates[]" min="1" id="updates_<?php echo $k;?>" value="<?php echo $v['qty'];?>" onfocus="this.select();" class="tc item-quantity">
-                                    </td>
-                                    <td class="price promotion"><?php echo number_format($v['price']);?>đ</td>
-                                    <td class="price promotion">
-                                        <?php echo number_format($subTotal);?>đ
-                                    </td>
-                                    <td class="remove">
-                                        <a href="#" class="cart">Xóa</a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-
-                            <tr>
-                                <td colspan="2" style="text-align:right">Tổng cộng</td>
-                                <td class="totalQty"><?php echo $cart['total'];?></td>
-                                <td class="price"></td>
-                                <td><span class="price-text"><?php echo number_format($total);?>đ</span></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="clearfix">
-                        <div class="pull-left">
-                            <a href="#" class="continue"><i class="fa fa-angle-left"></i>Tiếp tục mua sắm</a>
-                        </div>
-                        <div class="cart-buttons inner-right">
-                            <div class="buttons clearfix">
-                                <button type="button" id="update-cart" class="button-default" name="update">Cập nhật số lượng</button>
-                                <a href="<?php echo $BASE_URL;?>/thanh-toan" id="check">Thanh toán</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <?php if (!empty($cart)):?>
+                <?php echo $this->element('Layout/cart');?>
+                <?php endif;?>
             </div>
         </div>
         <!-- End cart -->
     </div>
 </div>
 <!--/cart-->
-<?php endif;?>

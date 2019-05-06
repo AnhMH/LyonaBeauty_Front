@@ -126,13 +126,7 @@ function updateCart($pId, $qty) {
             },
             'callback': function (data) {
                 if (data != 'Error') {
-                    $('#cartContainer').html(data);
-                    var $cartTotal = parseInt($('#cartTotal').html());
-                    if ($cartTotal > 0) {
-                        $('#topCartNumber').show().html($cartTotal);
-                    } else {
-                        $('#topCartNumber').hide();
-                    }
+                    $('#layout-page').html(data);
                 }
             },
             'complete': function() {
