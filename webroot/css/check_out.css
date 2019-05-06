@@ -7,7 +7,8 @@ body{
 	color: red
 }
 body.step1 h1{
-	background: url("logo2.png") center center no-repeat;
+        background-position: center center;
+        background-repeat: no-repeat;
 	width: 100%;
 	height: 60px;
 	font-size: 0;
