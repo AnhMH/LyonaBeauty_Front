@@ -141,10 +141,8 @@
                         </li>
                     </ul>
                     <div class="tab-container">
-                        <div id="product-detail" class="tab-panel active">
-                            <div class="des">
-                                <?php echo $data['detail']; ?>
-                            </div>
+                        <div id="product-detail">
+                            <?php echo $data['detail']; ?>
                         </div>
                     </div>
                 </div>
