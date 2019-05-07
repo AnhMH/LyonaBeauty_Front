@@ -10,27 +10,27 @@
     <div class="col-4 step1">
         <h2>Thông tin giao hàng</h2>
         <div class="form-info">
-            <form accept-charset="UTF-8" action="/checkout/create_order" class="new_order required" id="forminfo" method="post" novalidate="novalidate">
+            <form accept-charset="UTF-8" action="/dat-hang" class="new_order" id="forminfo" method="post" novalidate="novalidate">
                 <div class="form-group">
                 </div>
                 <div class="form-group">
-                    <input placeholder="Họ và tên" class="formcontrol required" id="billing_address_full_name" name="billing_address[full_name]" size="30" type="text">
+                    <input placeholder="Họ và tên" class="formcontrol required" id="billing_address_full_name" name="name" size="30" type="text">
                     <p>Họ và tên</p>
                 </div>
                 <div class="form-group">
-                    <input placeholder="Số điện thoại" maxlength="11" id="billing_address_phone" class="formcontrol required" name="billing_address[phone]" size="30" title="Nhập số điện thoại" pattern="^\d{8,11}" type="tel" value="" required="" aria-required="true">
+                    <input placeholder="Số điện thoại" maxlength="11" id="billing_address_phone" class="formcontrol required" name="phone" size="30" title="Nhập số điện thoại" pattern="^\d{8,11}" type="tel" value="" required="" aria-required="true">
                     <p>Số điện thoại</p>
                 </div>
                 <div class="form-group">
-                    <input placeholder="Email" id="order_email" name="checkout_user[email]" class="formcontrol required" size="30" type="email" value="" required="" aria-required="true">
+                    <input placeholder="Email" id="order_email" name="email" class="formcontrol required" size="30" type="email" value="" required="" aria-required="true">
                     <p>Email</p>
                 </div>
                 <div class="form-group">
-                    <input placeholder="Địa chỉ" id="billing_address_address1" class="formcontrol required" name="billing_address[address1]" size="30" type="text" value="" required="" aria-required="true">
+                    <input placeholder="Địa chỉ" id="billing_address_address1" class="formcontrol required" name="address" size="30" type="text" value="" required="" aria-required="true">
                     <p>Địa chỉ</p>
                 </div>
                 <div class="form-group">
-                    <textarea id="billing_note" placeholder="Ghi chú đơn hàng" name="billing_address[note]" rows="3" class="formcontrol ordernote"></textarea>
+                    <textarea id="billing_note" placeholder="Ghi chú đơn hàng" name="note" rows="3" class="formcontrol ordernote"></textarea>
                     <p>Ghi chú đơn hàng</p>
                 </div>
                 <div class="error summary" style="display: none">
@@ -58,7 +58,7 @@
                 <span class="label-radio"> Thanh toán khi giao hàng (COD)</span>
             </label>
             <span class="desc" style="display: block;"></span>
-            <label class="lb-method">
+<!--            <label class="lb-method">
                 <input class="input-method" type="radio" name="gateway" value="90036">
                 <span class="label-radio"> Chuyển khoản qua ngân hàng</span>
             </label>
@@ -68,7 +68,7 @@
                 Số tài khoản: 007.100.1058263 (TK VND)
                 Tên tài khoản: CT TNHH HOA SEN VIET
                 NỘI DUNG CHUYỂN KHOẢN: Họ và Tên + Mã đơn hàng
-            </span>
+            </span>-->
             <span class="desc"></span>
         </div>
         <div class="show__info">

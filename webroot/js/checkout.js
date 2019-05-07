@@ -23,6 +23,22 @@ function checkoutInputs() {
 }
 
 function checkout() {
+    var error = false;
+    $('.btn-checkout').unbind('click').bind('click', function() {
+        $('.required').each(function(e) {
+            var val = $(this).val();
+            if (val == '') {
+                error = true;
+            }
+        });
+
+        if (error) {
+            $('.new_order').addClass('error');
+            $('.error.summary').show();
+        } else {
+            $('#forminfo').submit();
+        }
+    });
     
 }
 

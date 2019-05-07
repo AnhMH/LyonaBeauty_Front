@@ -30,9 +30,9 @@ $cart = $this->formatCart($cart);
 $session->write($sessionKey, $cart);
 $cart[$id]['qty'] = $data['qty'];
 $result = array(
-    'total' => $total,
+    'total' => $cart['total'],
     'data' => $cart[$id],
-    'html' => $html
+    'html' => $cart['html']
 );
 echo json_encode($result);
 exit();
