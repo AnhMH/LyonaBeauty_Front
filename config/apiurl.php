@@ -20,3 +20,5 @@ Configure::write('API.url_posts_list', 'posts/list');
 Configure::write('API.url_posts_detail', 'posts/detail');
 
 Configure::write('API.url_orders_addupdate', 'orders/addupdate');
+
+Configure::write('API.url_contacts_addupdate', 'contacts/addupdate');

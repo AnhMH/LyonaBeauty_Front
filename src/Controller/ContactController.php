@@ -15,7 +15,7 @@ class ContactController extends AppController {
             foreach ($data as $key => $value) {
                 $data[$key] = trim($value);
             }
-            $contact = Api::call(Configure::read('API.url_contact_addupdate'), $data);
+            $contact = Api::call(Configure::read('API.url_contacts_addupdate'), $data);
             $this->Flash->success("Cảm ơn bạn đã liên hệ, chúng tôi sẽ trả lời tin nhắn sớm nhất có thể.");
             return $this->redirect("{$this->BASE_URL}/lien-he");
         }
