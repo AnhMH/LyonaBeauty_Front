@@ -27,7 +27,7 @@ $data['total_price'] = $totalPrice;
 $data['detail'] = json_encode($productData);
 $result = Api::call(Configure::read('API.url_orders_addupdate'), $data);
 $error = Api::getError();
-if (!empty($error) || empty($result)) {
+if (!empty($error) && empty($result)) {
     echo 'Lỗi';
     die();
 } else {
