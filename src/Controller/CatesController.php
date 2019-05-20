@@ -35,7 +35,8 @@ class CatesController extends AppController {
         $param = array(
             'cate_id' => implode(',', $ids),
             'limit' => $limit,
-            'get_new_posts' => 1
+            'get_new_posts' => 1,
+            'disable' => 0
         );
         $pageTitle = $cateName;
         
