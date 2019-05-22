@@ -4,8 +4,15 @@ $_pcs = array();
 foreach ($cate_products as $_cp) {
     $cps[$_cp['cate_id']][] = $_cp;
 }
-foreach ($productCates as $k => $v) {
-    if (!empty($v['child_data']) && !empty($v['data']['is_homepage'])) {
+foreach ($productCates as &$v) {
+    if (empty($v['child_data'])) {
+        $v['child_data'] = array(
+            $v['data']['id'] => $v['data']
+        );
+    }
+}
+foreach ($productCates as $k => &$v) {
+    if (!empty($v['data']['is_homepage'])) {
         $_pcs[$k] = $v;
         foreach ($v['child_data'] as $ck => $c) {
             if (!empty($cps[$ck])) {
