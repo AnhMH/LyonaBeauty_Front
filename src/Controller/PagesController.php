@@ -66,4 +66,20 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    
+    public function csdt() {
+        
+    }
+    
+    public function csbmtt() {
+        
+    }
+    
+    public function dksd() {
+        
+    }
+    
+    public function ghtt() {
+        
+    }
 }

@@ -64,6 +64,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/gio-hang/*', ['controller' => 'Cart', 'action' => 'index']);
     $routes->connect('/thanh-toan/*', ['controller' => 'Cart', 'action' => 'checkout']);
     $routes->connect('/dat-hang/*', ['controller' => 'Cart', 'action' => 'complete']);
+    
+    $routes->connect('/chinh-sach-doi-tra/*', ['controller' => 'Pages', 'action' => 'csdt']);
+    $routes->connect('/chinh-sach-bao-mat-thong-tin/*', ['controller' => 'Pages', 'action' => 'csbmtt']);
+    $routes->connect('/dieu-khoan-su-dung/*', ['controller' => 'Pages', 'action' => 'dksd']);
+    $routes->connect('/giao-hang-va-thanh-toan/*', ['controller' => 'Pages', 'action' => 'ghtt']);
 
     /**
      * Connect catchall routes for all controllers.

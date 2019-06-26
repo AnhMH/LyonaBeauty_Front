@@ -3,7 +3,7 @@
     <div class="container">
         <!-- introduce-box -->
         <div id="introduce-box">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div id="address-box">
                     <a href="<?php echo $BASE_URL;?>">
                         <img class="lazy" src="<?php echo $_settings['company']['logo'];?>" alt="logo" />
@@ -18,9 +18,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
+                        <div class="introduce-title">Hỗ trợ</div>
+                        <ul id="introduce-company"  class="introduce-list">
+                            <li><a href="<?php echo $BASE_URL;?>/dieu-khoan-su-dung">Điều khoản sử dụng</a></li>
+                            <li><a href="<?php echo $BASE_URL;?>/giao-hang-va-thanh-toan">Giao hàng và thanh toán</a></li>
+                            <li><a href="<?php echo $BASE_URL;?>/chinh-sach-doi-tra">Chính sách đổi trả</a></li>
+                            <li><a href="<?php echo $BASE_URL;?>/chinh-sach-bao-mat-thong-tin">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
                         <div class="introduce-title">Dòng sản phẩm</div>
                         <ul id="introduce-company"  class="introduce-list">
                             <?php if (!empty($productCates)): ?>
@@ -30,7 +39,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="introduce-title">Blog làm đẹp</div>
                         <ul id = "introduce-Account" class="introduce-list">
                             <?php if (!empty($_settings['blog_cates'])): ?>
@@ -63,6 +72,11 @@
                             <a href="<?php echo $_settings['company']['zalo'];?>" target="_blank" rel="nofollow"><img class="image-icon-footer" src="https://file.hstatic.net/1000036599/file/zalo.png"></a>
                             <?php endif; ?>
                         </div>
+                        <div class="dangky-bct pull-left">
+                                <a rel="nofollow" target="_blank" href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=56197">
+                                        <img class="lazy" src="<?php echo $BASE_URL;?>/images/bctthongbao.png" alt="Banner footer 4">
+                                </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,6 +98,8 @@
         </div> <!-- /#trademark-box -->
         <div class="footer-info-bottom">
             <p>&copy; 2019 <strong>LyonaBeauty.com</strong></p>
+            <p>Công ty TNHH Đào Tạo Sản Xuất Thương Mại LYONABEAUTY & COSMETICS</p>
+            <p>GPDKKD số 3702476148, cấp ngày 24/06/2016, nơi cấp sở KHĐT tỉnh Bình Dương</p>
             <p>Địa chỉ: <?php echo $_settings['company']['address'];?></p>
             <p>Điện thoại: <?php echo $_settings['company']['tel'];?></p>
             <p>Email: <?php echo $_settings['company']['email'];?></p>
