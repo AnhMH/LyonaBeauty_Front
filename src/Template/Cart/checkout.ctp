@@ -98,7 +98,7 @@
                 ?>
                 <div class="list_item cart-item">
                     <span><?php echo $v['qty'];?> x</span>
-                    <span> Phấn Nước Bổ Sung Ẩm MIRACLE FINISH CC ULTRA MOIST CUSHION SPF50+ PA+++V201</span>
+                    <span><?php echo $v['name'];?></span>
                     <span class="price"><?php echo number_format($subPrice);?>₫</span>
                 </div>
                 <?php endforeach;?>
